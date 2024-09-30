@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopCart</title>
+    <link rel="icon" href="./images/sc logo2.jpg">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            
+           
+        } 
+       nav{
+            background-color:black;
+            height: 80px;
+            width: 100%;
+            position:sticky; 
+            top: 0px;
+            padding-bottom: 10px;
+            display: flex;
+          } 
+
+          .search{
+            position: absolute;
+            top: 37px;
+            right: 893px;
+            border-style: none;
+            color:black;
+            background: none;
+            font-size: 20px;
+          }
+          .search-bar{
+            width: 300px;
+            font-size: 15px;
+            margin-left: 20%;
+            height: 30px;
+            padding-left: 33px;
+            margin-top: 30px;
+            
+           
+            
+          }
+
+          .list, h1, .list-item{
+                     color:white;
+                     display: inline-block;
+          }
+
+          .list-item{
+            color: white;
+            font-size:20px;
+            margin-right: 10px;
+            margin-top: 30px;
+          }
+
+          .list{
+            color: white;
+            margin-left:50px;
+            margin-top: 4px;
+           }
+          h1{
+               font-size: 20px;    
+               font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+               padding-left: px;
+               
+          }
+          a{
+            color:white;
+            text-decoration: none;
+          }
+
+          a:hover{
+            color:red;
+          }
+
+          .catogories{
+            background-color:rgb(27, 63, 65);
+            margin-top: 2px;
+            padding-left: 30px;
+            margin-bottom: 2px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: sticky;
+            top: 90px;
+            
+          }
+          
+          .items{
+            color: white;
+            font-size: 20px;
+            margin-right: 30px;
+            font-weight: 500; 
+          }
+
+
+          .product-heading{
+            color:orange;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            font-size: 35px;
+            background-color:rgb(27, 63, 65);
+            width: 100%;
+            padding: 3px;
+            margin-bottom: 5px;
+            
+            
+          }
+
+
+          .product{
+            border: 1px solid white;
+            border-radius: 3px;
+            width: 350px;
+            text-align: center;
+            margin-left: 40px;
+            margin-top: 20px;
+            display: inline-block;
+            padding: 20px;
+            background-color: white;
+          
+          }
+
+          h2{
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: slateblue;
+            margin-bottom: 5px;
+            
+          }
+
+          p{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 18px;
+            margin-bottom: 5px;
+          
+          }
+
+          .org-price{
+            font-size:20px;
+            font-family: bold;
+            margin-bottom: 5px;
+            color:darkgray;
+            text-decoration-line: line-through;
+            font-weight: bold;
+            margin-right: 10px;
+          }
+
+          .off-price{
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 10px;
+          }
+
+          .offer{
+            color: green;
+            font-size:20px;
+          }
+
+          .buy-button{
+            font-size: 15px;
+            background-color:orange;
+            border-radius: 3px;
+            padding: 5px;
+            border-style: none;
+            font-weight: bold;
+            width: 130px;
+            height: 37px;
+            margin-top: 7px;
+            color: white;
+          }
+
+
+          .cart-button{
+            font-size: 15px;
+            background-color: orangered;
+            border-radius: 3px;
+            padding: 5px;
+            border-style: none;
+            font-weight: bold;
+            width: 130px;
+            height: 37px;
+            margin-top: 7px;
+            color: white;
+          }
+
+
+          button:hover{
+            background-color:rgb(27, 63, 65);
+          }
+
+          .more-items-button{
+            color: white;
+            background-color: orangered;
+            height: 40px;
+            width: 130px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            border-style: none;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 20px;
+            
+          }
+
+          footer{
+              background-color:rgb(5, 15, 15); 
+          }
+
+          .footer_content{
+            display: flex;
+            margin-left: 12%;
+            margin-bottom: 20px;
+          }
+
+          .footer{
+            text-align: justify;
+            margin-right: 60px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+
+        
+
+          .foo-heading {
+            font-size: 20px;
+            margin-bottom: 5px;
+            
+            
+          }
+
+          .foo-list {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: lightgray;
+            list-style-type: none;
+          }
+
+          .footer-logo-content{
+            display: flex; 
+           margin-top: 10px;
+           padding-bottom: 10px;
+          padding-left: 22%;
+          }
+          
+    </style>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+      <img src="./images/shopkart-removebg-preview.png" alt="" width="160px" height="100px">
+       <input  type="text" placeholder="Search for Products,Brands and More" class="search-bar">
+       <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <ul class="list">
+            <li class="list-item"><a href="./index.html"><i class="fa-solid fa-house" style="padding-right: 5px;"></i>Home</a></li>
+            <li class="list-item"><a href="./register.html"><i class="fa-solid fa-registered" style="padding-right: 5px;"></i>Register</a></li>
+            <li class="list-item"><a href="./sign in .html"><i class="fa-solid fa-right-to-bracket" style="padding-right: 5px;"></i>Sign in</a></li>
+            <li class="list-item"><a href="./smartphones.html"><i class="fa-brands fa-product-hunt " style="padding-right: 5px;"></i>Products</a></li>
+            <li class="list-item"><a href=""><i class="fa-solid fa-cart-shopping" style="padding-right: 5px;"></i>Cart</a></li>
+        </ul>
+    </nav>
+
+    <div class="catogories">
+      <a href="./smartphones.html"  class="items">Smart Phones </a>   
+      <a href="./headphones.html"  class="items">Head Phones </a>
+      <a href="./smartwatch.html"  class="items">Smart Watches </a>
+      <a href="./airpods.html"  class="items">Airpods </a>
+      <a href="./laptop.html"  class="items">Laptops </a>
+      <a href="./speakers.html"  class="items">Speakers </a>
+      <a href="./smart tv .html"  class="items">Smart TV </a>   
+      <a href="./tablet.html"  class="items">Tablets </a>
+      <a href="./camera.html"  class="items">cameras </a>
+      <a href="./mouse.html"  class="items">Mouse </a>
+      <a href="./joystic.html"  class="items">Joystics </a>
+      <a href="./usb.html"  class="items">USB</a>
+    </div>  
+
+    <div>
+      <img src="./images/smart tv banner.webp" alt="" width="100%" height="300px"  id="Top-page">
+    </div>
+
+   
+
+      <div style="text-align: center;"><h1 class="product-heading">Smart Tv</h1></div>
+  
+      <div style="background-color:rgb(201, 198, 198);">
+    <div class="product">
+        <img src="./images/insignia smart tv.jpg" alt="" width="350px" height="220px">
+        <h2>INSIGNIA 50-Inch</h2>
+        <p>INSIGNIA 50-inch Class F30 Series LED 4K UHD ,Smart Fire TV with Alexa Voice Remote (NS-50F301NA24)</p>
+        <div style="display: flex;margin-left: 65px;">
+          <h3 class="off-price">$24,999</h3>
+          <h4 class="org-price">$49,999</h4>
+          <h2 class="offer">50% off</h2>
+        </div>
+        <h5 style=" font-size: 18px;"><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-regular fa-star" style="color:rgb(8, 88, 8)"></i></h5>
+        <button class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+        <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+    </div>
+
+
+    <div class="product">
+      <img src="./images/amazon fire tv.jpg" alt="" width="350px" height="220px">
+      <h2>Amazon Fire TV</h2>
+      <p>Amazon Fire TV 32" 2-Series HD smart TV with Fire TV Alexa Voice Remote,stream live TV without cable</p>
+      <div style="display: flex;margin-left: 65px;">
+        <h3 class="off-price">$32,999</h3>
+        <h4 class="org-price">$45,490</h4>
+        <h2 class="offer">60% off</h2>
+      </div>
+      <h5 style=" font-size: 18px;"><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star"  style="color:rgb(8, 88, 8)"><i class="fa-regular fa-star-half-stroke" style="color:rgb(8, 88, 8)"></i></i></h5>
+      <button class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+      <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="./images/samsung tv.jpg" alt="" width="350px" height="220px">
+    <h2>SAMSUNG 65-Inch</h2>
+    <p>SAMSUNG 65-Inch Class Crystal UHD 4K DU7200 Series HDR Smart TV w/Object Tracking Sound Lite, PurColor.</p>
+    <div style="display: flex;margin-left: 65px;">
+      <h3 class="off-price">$62,990</h3>
+      <h4 class="org-price">$96,900</h4>
+      <h2 class="offer">34% off</h2>
+    </div>
+    <h5 style=" font-size: 18px;"><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-regular fa-star" style="color:rgb(8, 88, 8)"></i></h5>
+    <button class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+    <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="product">
+  <img src="./images/tcl tv.jpg" alt="" width="350px" height="220px">
+  <h2>TCL S9 55-Inch</h2>
+  <p>TCL 55-Inch Class S5 UHD 4K LED Smart TV with Fire TV (55S551F, 2024 Model), Dolby Vision, HDR PRO+, Dolby Atmos.</p>
+  <div style="display: flex;margin-left: 65px;">
+    <h3 class="off-price">$28,490</h3>
+    <h4 class="org-price">$64,990</h4>
+    <h2 class="offer">56% off</h2>
+  </div>
+  <h5 style=" font-size: 18px;"><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-regular fa-star-half-stroke" style="color:rgb(8, 88, 8)"></i></h5>
+  <button class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+  <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+</div>
+
+<div class="product">
+  <img src="./images/hisense tv.jpg" alt="" width="350px" height="220px">
+  <h2>HISENSE A4 Series</h2>
+  <p>Hisense 40-Inch Class A4 Series FHD 1080p Smart Roku TV with Alexa Compatibility (40A4NR, 2024 Model) - Dolby Audio.</p>
+  <div style="display: flex;margin-left: 65px;">
+    <h3 class="off-price">$24,899</h3>
+    <h4 class="org-price">$42,990</h4>
+    <h2 class="offer">53% off</h2>
+  </div>
+  <h5 style=" font-size: 18px;"><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-regular fa-star" style="color:rgb(8, 88, 8)"></i></h5>
+  <button class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+  <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+</div>
+
+<div class="product">
+  <img src="./images/panasonic tv.jpg" alt="" width="350px" height="220px">
+  <h2>Panasonic Z95</h2>
+  <p>Panasonic Z95 Series 65-inch OLED 4K Ultra HD Smart TV with Amazon Fire TV Built-in, Dolby Vision IQ, HDR10+ Adaptive, 144Hz.</p>
+  <div style="display: flex;margin-left: 65px;">
+    <h3 class="off-price">$19,990</h3>
+    <h4 class="org-price">$35,499</h4>
+    <h2 class="offer">43% off</h2>
+  </div>
+  <h5 style=" font-size: 18px;"><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-regular fa-star-half-stroke" style="color:rgb(8, 88, 8)"></i><i class="fa-regular fa-star" style="color:rgb(8, 88, 8)"></i></h5>
+  <button class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+  <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+</div>
+
+<div style="text-align: center;">
+  <a href="./tablet.html"><button class="more-items-button">More Items<i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i></button></a>
+</div>
+</div>
+
+<div style="background-color:rgb(53, 52, 52); text-align: center; padding: 10px; color: white;">
+  <a href="#Top-page" style="font-size: 25px;">Back to Top</a>
+  </div> 
+
+ <footer>
+
+     <div class="footer_content">
+     <div class="footer">
+        <h1 class="foo-heading">Get to Know Us</h1>
+        <li class="foo-list"><a href="">Careers</a></li>
+        <li class="foo-list"><a href="">Blog</a></li>
+        <li class="foo-list"><a href="">About Shopcart</a></li>
+        <li class="foo-list"><a href="">Investor Relations</a></li>
+        <li class="foo-list"><a href="">Shopcart Devices</a></li>
+        <li class="foo-list"><a href="">ShopCart Science</a></li> 
+    </div>
+
+
+    <div class="footer">
+      <h1 class="foo-heading">Make Money with Us</h1>
+        <li class="foo-list"><a href="">Sell Products on shopCart</a></li>
+        <li class="foo-list"><a href="">Sell on ShopCart Businesss</a></li>
+        <li class="foo-list"><a href="">Sell apps on ShopCart</a></li>
+        <li class="foo-list"><a href="">Become an Affiliate</a></li>
+        <li class="foo-list"><a href="">Advertise Your Products</a></li>
+        <li class="foo-list"><a href="">Self publish with Us</a></li>
+        <li class="foo-list"><a href="">Host an ShopCart Hub</a></li>
+      
+    </div>
+
+    <div class="footer">
+      <h1 class="foo-heading">ShopCart Payment Products</h1>
+      <ul>
+        <li class="foo-list"><a href="">ShopCart Business Card</a></li>
+        <li class="foo-list"><a href="">Shop with Points</a></li>
+        <li class="foo-list"><a href="">Reload Your Balance</a></li>
+        <li class="foo-list"><a href="">ShopCrat Currency Converter</a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <h1 class="foo-heading">Let Us Help You</h1>
+      <ul>
+        <li class="foo-list"><a href="">ShopCart and COVID-19</a></li>
+        <li class="foo-list"><a href="">Your Account</a></li>
+        <li class="foo-list"><a href="">Your Orders</a></li>
+        <li class="foo-list"><a href="">Shipping rates $ Policies</a></li>
+        <li class="foo-list"><a href="">Manage Your content and Devices</a></li>
+        <li class="foo-list"><a href="">Help</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <hr>
+   
+    <div class="footer-logo-content">
+     
+      <img src="./images/shopkart-removebg-preview.png" alt="" width="130px" height="80px">
+
+      <div style="margin-left: 10%; display: flex;" >
+      <div style="border: 1px solid gainsboro; color: white; width: 140px; height: 30px; text-align:center; margin-top: 20px; margin-right: 10px;">
+        <p style="margin-top: 5px;"><i class="fa-solid fa-globe" style="margin-right: 7px;"></i>Languages</p>
+      </div>
+      
+      <div style="border: 1px solid gainsboro; color: white; width: 180px; height: 30px; text-align:center; margin-top: 20px; margin-right: 10px;">
+        <p style="margin-top: 5px; color: white;"><i class="fa-light fa-indian-rupee-sign;"></i> INR - Indian Rupee</p>
+      </div>
+
+      <div style="border: 1px solid gainsboro; color: white; width: 160px; height: 30px; text-align:center; margin-top: 20px;">
+        <p style="margin-top: 5px; color: white;"><img src="./images/india flag.png" alt="" height="15px" width="23px" style="margin-right: 7px;">United States</p>
+      </div>
+      </div>
+
+    </div> 
+ </footer>
+</body>
+</html>

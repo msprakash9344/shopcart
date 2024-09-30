@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopCart</title>
+    <link rel="icon" href="./images/sc logo2.jpg">
+    
+   <style>
+        *{
+            padding: 0;
+            margin: 0;
+            
+           
+        } 
+       nav{
+            background-color:black;
+            height: 80px;
+            width: 100%;
+            position:sticky; 
+            top: 0px;
+            padding-bottom: 10px;
+            display: flex;
+          } 
+
+          .search{
+            position: absolute;
+            top: 37px;
+            right: 893px;
+            border-style: none;
+            color:black;
+            background: none;
+            font-size: 20px;
+          }
+          .search-bar{
+            width: 300px;
+            font-size: 15px;
+            margin-left: 20%;
+            height: 30px;
+            padding-left: 33px;
+            margin-top: 30px;
+            
+           
+            
+          }
+
+          .list, h1, .list-item{
+                     color:white;
+                     display: inline-block;
+          }
+
+          .list-item{
+            color: white;
+            font-size:20px;
+            margin-right: 10px;
+            margin-top: 30px;
+          }
+
+          .list{
+            color: white;
+            margin-left:50px;
+            margin-top: 4px;
+           }
+          h1{
+               font-size: 20px;    
+               font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+               padding-left: px;
+               
+          }
+          a{
+            color:white;
+            text-decoration: none;
+          }
+
+          a:hover{
+            color:red;
+          }
+
+          .catogories{
+            background-color:rgb(27, 63, 65);
+            margin-top: 2px;
+            padding-left: 30px;
+            margin-bottom: 2px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: sicky;
+            top: px;
+            
+          }
+          
+          .items{
+            color: white;
+            font-size: 20px;
+            margin-right: 30px;
+            font-weight: 500; 
+          }
+
+          h4{
+            width:100%;
+            animation-name: example;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            font-weight:bold;
+            font-size:25px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            
+        }
+
+
+        .animation{
+          animation-timing-function:linear;
+        }
+
+     
+
+        @keyframes example {
+            from{
+                margin-left: 100%;
+            }
+            to{
+                margin-left: -100%;
+            }
+        } 
+
+        .banner {
+          width: 100%;
+          height: 250px; 
+        }
+
+          h2{
+            color:orange;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            font-size: 35px;
+            background-color:rgb(27, 63, 65);
+            width: 100%;
+            padding: 3px;
+            margin-bottom: 5px;
+            text-align: center;
+          }
+          
+          .container{
+          border: 1px solid white;
+          background-color: white;
+          border-radius: 3px;
+          padding: 21px;
+          display: inline-block;
+          margin: 10px; 
+        }
+
+        colgroup:hover{
+
+        }
+
+        .product-content{
+          margin-left: 25%;
+          margin-top: 5px;
+        }
+  
+          h3{
+            font-size: 25px;
+            color:darkorchid;
+            margin-bottom:6px;
+          }
+
+          h6{
+            font-size: 20px;
+            margin-bottom: 6px;
+            font-weight: bold;
+          }
+
+          p{
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 4px;
+
+        }
+
+         .buy-button{
+            border-radius: 3px;
+            border-style: none;
+            font-size: 12px;
+            background-color:orange;
+            height: 30px;
+            width: 90px;
+            color: white; 
+            margin-bottom: 10px;
+           
+          }
+
+          
+          .cart-button{
+            border-radius: 3px;
+            border-style: none;
+            font-size: 12px;
+            background-color:orangered;
+            height: 30px;
+            width:90px;
+            color: white; 
+            margin-bottom: 10px;
+            font-weight: bold;        
+          }
+
+          button:hover{
+            background-color:rgb(27, 63, 65);
+           
+          }
+        
+        .see-more{
+          color:blue;
+          font-size: 20px;
+          font-weight: bold;  
+          margin-top:10px;
+          margin-left: 5px;
+          
+          
+        }
+        
+
+        .product-heading {
+          color: black;
+          margin-bottom: 10px;
+          
+          
+          }
+
+          
+          .more-item{ 
+            background-color:orangered;
+            height: 40px;
+            width: 120px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: bold;
+            border-style: none;
+            color: white;
+            margin-top: 20px;
+          }
+
+          footer{
+              background-color:rgb(5, 15, 15); 
+          }
+
+          .footer_content{
+            display: flex;
+            margin-left: 12%;
+            margin-bottom: 20px;
+          }
+
+          .footer{
+            text-align: justify;
+            margin-right: 60px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+
+        
+
+          .foo-heading {
+            font-size: 20px;
+            margin-bottom: 5px;
+            
+            
+          }
+
+          .foo-list {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: lightgray;
+            list-style-type: none;
+          }
+
+          .footer-logo-content{
+            display: flex; 
+           margin-top: 10px;
+           padding-bottom: 10px;
+          padding-left: 22%;
+          }
+
+          @media only screen and (max-width:600px)
+          {
+            nav{
+              width:100%;
+            
+            }         
+            .logo{
+              height: 80px;
+              width: 100px;
+              margin-top: 8px;
+            }
+
+            .search-bar{
+              display: none;
+            }
+
+            .banner{
+              width: 100%;
+              height: 100px;
+            }
+            
+          .list{
+            margin-left: 5px;
+            
+          }
+            .list-item{
+              margin-left: 3px;
+              font-size: 15px;
+              margin-right: 2px;
+              
+            }
+
+           
+
+            .items{
+              margin-right: 17px;
+            }
+
+            h4{
+              font-size: 15px;
+            }
+
+            .container{
+              width: 160px;
+              margin-left: 22px;
+            }
+
+            img{
+              width: 150px;
+              height: 100px;
+
+            }
+
+            h3{
+              font-size: 20px;
+              padding-left: 0px;
+            }
+
+            .product-content{
+              text-align: ;
+              margin-left: 5px;
+              
+            }
+            
+            p{
+              font-size: 12px;            
+            }
+            .buy-button{
+              width: 75px;
+              font-size: 10px;
+            }
+
+            .cart-button{
+              width: 75px;
+              font-size: 10px;
+            }
+
+            .see-more{
+              font-size: 15px;
+            }
+
+          .footer_content{
+            margin-left:5%;
+
+          }
+
+          .footer{
+            margin-right: 20px;
+          }
+          
+          .foo-heading {
+            font-size: 9px;
+            margin-bottom: 5px;
+            
+            
+          }
+
+          .foo-list {
+            font-size: 7px;
+            margin-bottom:5px;
+
+          }
+
+          .footer-logo-content{
+            padding-left: 15px;
+          }
+
+
+          }
+
+          
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <img src="./images/shopkart-removebg-preview.png" alt="" width="160px" height="100px" class="logo" >
+        <input  type="text" placeholder="Search for Products,Brands and More" class="search-bar">
+        <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <ul class="list">
+            <li class="list-item"><a href=""><i class="fa-solid fa-house" style="padding-right: 5px;"></i>Home</a></li>
+            <li class="list-item"><a href="./register.html"><i class="fa-solid fa-registered" style="padding-right: 5px;"></i>Register</a></li>
+            <li class="list-item"><a href="./sign in .html"><i class="fa-solid fa-right-to-bracket" style="padding-right: 5px;"></i>Sign in</a></li>
+            <li class="list-item"><a href="./smartphones.html"><i class="fa-brands fa-product-hunt " style="padding-right: 5px;"></i>Products</a></li>
+            <li class="list-item"><a href=""><i class="fa-solid fa-cart-shopping" style="padding-right: 5px;"></i>Cart</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="catogories">
+      <a href="./smartphones.html"  class="items">Smart Phones </a>   
+      <a href="./headphones.html"  class="items">Head Phones </a>
+      <a href="./smartwatch.html"  class="items">Smart Watches </a>
+      <a href="./airpods.html"  class="items">Airpods </a>
+      <a href="./laptop.html"  class="items">Laptops </a>
+      <a href="./speakers.html"  class="items">Speakers </a>
+      <a href="./smart tv .html"  class="items">Smart TV </a>   
+      <a href="./tablet.html"  class="items">Tablets </a>
+      <a href="./camera.html"  class="items">cemaras </a>
+      <a href="./mouse.html"  class="items">Mouse </a>
+      <a href="./joystic.html"  class="items">Joystics </a>
+      <a href="./usb.html"  class="items">USB</a>
+    </div> 
+
+    <div>
+      <h4 class="animation"><span style="color: green; margin-right: 30px;">Todays Offer 50%</span><span  style="color: red; margin-right: 30px;">Available Only Limited Stocks</span><span style="color:blue; margin-right: 30px;">Order Fast</span></h4>
+    </div>
+
+    <img src="./images/phone banner.webp" alt="" id="Top-page" class="banner">
+     
+    <h2>Products</h2>
+    
+    
+    <div style="background-color:rgb(201, 198, 198)"> 
+    
+   <div id="products" class="container">
+    <img src="./images/galaxy.jpg" alt="" height="280px" width="270px">
+    <div class="product-content">
+    <h3>Realme 6</h3>
+    <h6>$ 18,000</h6>
+    <p>Rating:<i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star-half-stroke" style="color: green;"></i></p>
+    <button  style="margin-top: 5px;" class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+    <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+    </div>
+    <div><a href="./smartphones.html" class="see-more">See More <i class="fa-solid fa-arrow-right"></i></a></div>
+   </div>
+  
+   
+
+   
+   <div class="container">
+    <img src="./images/jbl.jpg" alt="" height="280px" width="270px">
+    <div class="product-content">
+    <h3>JBL Tune 520</h3>
+    <h6>$ 1,999</h6>
+    <p>Rating:<i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"><i class="fa-solid fa-star-half-stroke" style="color: green;"></i></i><i class="fa-solid fa-star"></i></p>
+    <button  style="margin-top: 5px;" class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+    <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+    </div>
+    <div><a href="./headphones.html"  class="see-more">See More <i class="fa-solid fa-arrow-right"></i></a></div>
+   </div>
+
+
+
+
+   
+   <div class="container">
+    <img src="./images/smart watch1.jpg" alt="" height="280px" width="270px">
+    <div class="product-content">
+    <h3>Apple S9</h3>
+    <h6>$ 12,000</h6>
+    <p>Rating:<i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+    <button  style=" margin-top: 5px;" class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+    <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+    </div>
+    <div><a href="./smartwatch.html"  class="see-more">See More <i class="fa-solid fa-arrow-right" ></i></a></div>
+   </div>
+   
+
+    
+    <div class="container">
+    <img src="./images/apple pods.jpg" alt="" height="280px" width="270px">
+    <div class="product-content">
+    <h3>TOZO M10</h3>
+    <h6>$ 3,000</h6>
+    <p>Rating:<i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+    <button  style="margin-top: 5px;" class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+    <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+    </div>
+    <a href="./airpods.html" class="see-more">See More <i class="fa-solid fa-arrow-right" ></i></a>
+   </div>
+
+   <div class="container">
+   <img src="./images/laptop1.jpg" alt="" height="280px" width="270px">
+   <div class="product-content">
+   <h3>Apple Laptop</h3>
+   <h6>$ 55,000</h6>
+   <p>Rating:<i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+   <button  style="margin-top: 5px;" class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+   <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+   </div>
+   <div><a href="./laptop.html"  class="see-more">See More <i class="fa-solid fa-arrow-right" ></i></a></div>
+  </div>
+
+  <div class="container">
+  <img src="./images/blu speaker.jpg" alt="" height="280px" width="270px">
+  <div class="product-content">
+  <h3>Speaker</h3>
+  <h6>$ 3,000</h6>
+  <p>Rating:<i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+  <button style=" margin-top: 5px;" class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+  <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+  </div>
+  <div><a href="./speakers.html"  class="see-more">See More <i class="fa-solid fa-arrow-right" ></i></a></div>
+ </div>
+
+ <div id="products" class="container">
+  <img src="./images/vizio smart tv.jpg" alt="" height="280px" width="270px">
+  <div class="product-content">
+  <h3>VIZIO 40-Inch</h3>
+  <h6>$ 18,000</h6>
+  <p>Rating:<i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star-half-stroke" style="color: green;"></i></p>
+  <button  style="margin-top: 5px;" class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+  <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+  </div>
+  <div><a href="./smart tv .html" class="see-more">See More <i class="fa-solid fa-arrow-right" ></i></a></div>
+ </div>
+
+ 
+
+ 
+ <div class="container">
+  <img src="./images/ipad.jpg" alt="" height="280px" width="270px">
+  <div class="product-content">
+  <h3>Apple Ipad 9G</h3>
+  <h6>$ 1,999</h6>
+  <p>Rating:<i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"><i class="fa-solid fa-star-half-stroke" style="color: green;"></i></i><i class="fa-solid fa-star"></i></p>
+  <button  style="margin-top: 5px;" class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+  <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+  </div>
+  <div><a href="./table.html"  class="see-more">See More <i class="fa-solid fa-arrow-right"></i></a></div>
+ </div>
+
+
+
+
+ 
+ <div class="container">
+  <img src="./images/seneen digital camera.jpg" alt="" height="280px" width="270px">
+  <div class="product-content">
+  <h3>Cenaon T7</h3>
+  <h6>$ 12,000</h6>
+  <p>Rating:<i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+  <button  style=" margin-top: 5px;" class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+  <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+  </div>
+  <div><a href="./camera.html"  class="see-more">See More <i class="fa-solid fa-arrow-right" ></i></a></div>
+ </div>
+ 
+
+ <div id="products" class="container">
+  <img src="./images/Smaige mouse.jpg" alt="" height="280px" width="270px">
+  <div class="product-content">
+  <h3>Smaige</h3>
+  <h6>$ 18,000</h6>
+  <p>Rating:<i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star-half-stroke" style="color: green;"></i></p>
+  <button  style="margin-top: 5px;" class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+  <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+  </div>
+  <div><a href="./mouse.html" class="see-more">See More <i class="fa-solid fa-arrow-right" ></i></a></div>
+ </div>
+
+ 
+
+ 
+ <div class="container">
+  <img src="./images/XIAAGXUNA joystick.jpg" alt="" height="280px" width="270px">
+  <div class="product-content">
+  <h3>XIAAGXUNA</h3>
+  <h6>$ 1,999</h6>
+  <p>Rating:<i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"><i class="fa-solid fa-star-half-stroke" style="color: green;"></i></i><i class="fa-solid fa-star"></i></p>
+  <button  style="margin-top: 5px;" class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+  <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+  </div>
+  <div><a href="./joystic.html"  class="see-more">See More <i class="fa-solid fa-arrow-right"></i></a></div>
+ </div>
+
+
+
+
+ 
+ <div class="container">
+  <img src="./images/smartq usb.jpg" alt="" height="280px" width="270px">
+  <div class="product-content">
+  <h3>SmartQ C307</h3>
+  <h6>$ 12,000</h6>
+  <p>Rating:<i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star" style="color: green;"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+  <button  style=" margin-top: 5px;" class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+  <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+  </div>
+  <div><a href="./usb.html"  class="see-more">See More <i class="fa-solid fa-arrow-right" ></i></a></div>
+ </div>
+ 
+ 
+
+ <div style="text-align: center;"><a href="./smartphones.html"><button class="more-item">More Items<i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></button></a></div>
+ </div>
+
+ <div style="background-color:rgb(53, 52, 52); text-align: center; padding: 10px; color: white;">
+  <a href="#Top-page" style="font-size: 25px;">Back to Top</a>
+  </div> 
+
+ <footer>
+
+     <div class="footer_content">
+     <div class="footer">
+        <h1 class="foo-heading">Get to Know Us</h1>
+        <li class="foo-list"><a href="">Careers</a></li>
+        <li class="foo-list"><a href="">Blog</a></li>
+        <li class="foo-list"><a href="">About Shopcart</a></li>
+        <li class="foo-list"><a href="">Investor Relations</a></li>
+        <li class="foo-list"><a href="">Shopcart Devices</a></li>
+        <li class="foo-list"><a href="">ShopCart Science</a></li> 
+    </div>
+
+
+    <div class="footer">
+      <h1 class="foo-heading">Make Money with Us</h1>
+        <li class="foo-list"><a href="">Sell Products on shopCart</a></li>
+        <li class="foo-list"><a href="">Sell on ShopCart Businesss</a></li>
+        <li class="foo-list"><a href="">Sell apps on ShopCart</a></li>
+        <li class="foo-list"><a href="">Become an Affiliate</a></li>
+        <li class="foo-list"><a href="">Advertise Your Products</a></li>
+        <li class="foo-list"><a href="">Self publish with Us</a></li>
+        <li class="foo-list"><a href="">Host an ShopCart Hub</a></li>
+      
+    </div>
+
+    <div class="footer">
+      <h1 class="foo-heading">ShopCart Payment Products</h1>
+      <ul>
+        <li class="foo-list"><a href="">ShopCart Business Card</a></li>
+        <li class="foo-list"><a href="">Shop with Points</a></li>
+        <li class="foo-list"><a href="">Reload Your Balance</a></li>
+        <li class="foo-list"><a href="">ShopCrat Currency Converter</a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <h1 class="foo-heading">Let Us Help You</h1>
+      <ul>
+        <li class="foo-list"><a href="">ShopCart and COVID-19</a></li>
+        <li class="foo-list"><a href="">Your Account</a></li>
+        <li class="foo-list"><a href="">Your Orders</a></li>
+        <li class="foo-list"><a href="">Shipping rates $ Policies</a></li>
+        <li class="foo-list"><a href="">Manage Your content and Devices</a></li>
+        <li class="foo-list"><a href="">Help</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <hr>
+   
+    <div class="footer-logo-content">
+     
+      <img src="./images/shopkart-removebg-preview.png" alt="" width="130px" height="80px">
+
+      <div style="margin-left: 10%; display: flex;" >
+      <div style="border: 1px solid gainsboro; color: white; width: 130px; height: 30px; text-align:center; margin-top: 20px; margin-right: 10px;">
+        <p style="margin-top: 5px;"><i class="fa-solid fa-globe" style="margin-right: 7px;"></i>Languages</p>
+      </div>
+      
+      <div style="border: 1px solid gainsboro; color: white; width: 190px; height: 30px; text-align:center; margin-top: 20px; margin-right: 10px;">
+        <p style="margin-top: 5px; color: white;"><i class="fa-light fa-indian-rupee-sign;"></i> INR - Indian Rupee</p>
+      </div>
+
+      <div style="border: 1px solid gainsboro; color: white; width: 135px; height: 30px; text-align:center; margin-top: 20px;">
+        <p style="margin-top: 5px; color: white;"><img src="./images/india flag.png" alt="" height="10px" width="10px" style="margin-right: 7px;">United States</p>
+      </div>
+      </div>
+
+    </div> 
+ </footer>
+
+ 
+</body>
+</html>

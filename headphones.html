@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopCart</title>
+    <link rel="icon" href="./images/sc logo2.jpg">
+
+    <style>
+          *{
+            padding: 0;
+            margin: 0;
+            
+           
+        } 
+       nav{
+            background-color:black;
+            height: 80px;
+            width: 100%;
+            position:sticky; 
+            top: 0px;
+            padding-bottom: 10px;
+            display: flex;
+          } 
+
+          .search{
+            position: absolute;
+            top: 37px;
+            right: 893px;
+            border-style: none;
+            color:black;
+            background: none;
+            font-size: 20px;
+          }
+          .search-bar{
+            width: 300px;
+            font-size: 15px;
+            margin-left: 20%;
+            height: 30px;
+            padding-left: 33px;
+            margin-top: 30px;
+          }
+
+          .list, h1, .list-item{
+                     color:white;
+                     display: inline-block;
+          }
+
+          .list-item{
+            color: white;
+            font-size:20px;
+            margin-right: 10px;
+            margin-top: 30px;
+          }
+
+          .list{
+            color: white;
+            margin-left:50px;
+            margin-top: 4px;
+           }
+          h1{
+               font-size: 20px;    
+               font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+               padding-left: px;
+               
+          }
+          a{
+            color:white;
+            text-decoration: none;
+          }
+
+          a:hover{
+            color:red;
+          }
+
+          .catogories{
+            background-color:rgb(27, 63, 65);
+            margin-top: 2px;
+            padding-left: 30px;
+            margin-bottom: 2px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: sticky;
+            top: 90px;
+            
+          }
+          
+          .items{
+            color: white;
+            font-size: 20px;
+            margin-right: 30px;
+            font-weight: 500; 
+          }
+
+
+          
+          .product-heading{
+            color:orange;
+            margin-bottom: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            background-color:rgb(27, 63, 65);
+            width: 100%;
+            padding: 3px;
+            margin-bottom: 5px;
+            font-size: 35px;
+    
+          }
+
+          .product{
+            margin-left:35px;
+            text-align: justify;
+            border: 2px solid rgb(27, 63, 65);
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 380px;
+            margin-top: 20px;
+            
+            
+          }
+
+
+          
+
+          .content{
+            padding-left: 5px;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-bottom: 3px;
+          }
+
+
+          h3{
+            color:darkslateblue;
+            margin-top: 15px;
+            font-size: 30px;
+          }
+
+          
+          p{
+            margin-top: 10px;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+
+          .off-price{
+            font-weight: bold;
+            margin-top: 6px;
+            font-size: 20px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+          }
+
+          .org-price {
+          
+                color: darkgrey;
+                font-size: 20px;
+                font-weight: bold;
+                text-decoration-line: line-through;
+                margin-top: 6px;
+                margin-right: 5px;
+
+          }
+
+          .offer {
+            color: green;
+            font-size: 20px;
+            margin-top: 6px;
+            font-weight: bold;
+          }
+
+          h4{
+            margin-top: 4px;
+            font-size: 20px;
+          }
+
+
+          .buy-button{
+
+            border-style: none;
+            font-weight: bold;
+            background-color:orange;
+            height: 40px;
+            width: 130px;
+            font-size: 15px;
+            border-radius: 4px;
+            padding: 4px;
+            margin-top: 10px;
+            color: white;
+          }
+
+
+        .cart-button{
+          color: white;
+          border-style: none;
+          font-weight: bold;
+          background-color:orangered;
+          height: 40px;
+          width: 130px;
+          font-size: 15px;
+          border-radius: 4px;
+          padding: 4px;
+          margin-top: 10px;
+          }
+
+          button:hover{
+            background-color:rgb(27, 63, 65);
+          }
+            
+
+          .more-items-button{
+            color: white;
+            background-color: orangered;
+            height: 40px;
+            width: 130px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            border-style: none;
+            font-size: 15px;
+            font-weight: bold;
+            
+          }
+
+          footer{
+              background-color:rgb(5, 15, 15); 
+          }
+
+          .footer_content{
+            display: flex;
+            margin-left: 12%;
+            margin-bottom: 20px;
+          }
+
+          .footer{
+            text-align: justify;
+            margin-right: 60px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+
+        
+
+          .foo-heading {
+            font-size: 20px;
+            margin-bottom: 5px;
+            
+            
+          }
+
+          .foo-list {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: lightgray;
+            list-style-type: none;
+          }
+
+          .footer-logo-content{
+            display: flex; 
+           margin-top: 10px;
+           padding-bottom: 10px;
+          padding-left: 22%;
+          }
+
+
+    </style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+  <nav>
+    <img src="./images/shopkart-removebg-preview.png" alt="" width="160px" height="100px">
+   <input  type="text" placeholder="Search for Products,Brands and More" class="search-bar">
+   <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <ul class="list">
+        <li class="list-item"><a href="./index.html"><i class="fa-solid fa-house" style="padding-right: 5px;"></i>Home</a></li>
+        <li class="list-item"><a href="./register.html"><i class="fa-solid fa-registered" style="padding-right: 5px;"></i>Register</a></li>
+        <li class="list-item"><a href="./sign in .html"><i class="fa-solid fa-right-to-bracket" style="padding-right: 5px;"></i>Sign in</a></li>
+        <li class="list-item"><a href="./smartphones.html"><i class="fa-brands fa-product-hunt " style="padding-right: 5px;"></i>Products</a></li>
+        <li class="list-item"><a href=""><i class="fa-solid fa-cart-shopping" style="padding-right: 5px;"></i>Cart</a></li>
+    </ul>
+</nav>
+
+ 
+<div class="catogories">
+  <a href="./smartphones.html"  class="items">Smart Phones </a>   
+  <a href="./headphones.html"  class="items">Head Phones </a>
+  <a href="./smartwatch.html"  class="items">Smart Watches </a>
+  <a href="./airpods.html"  class="items">Airpods </a>
+  <a href="./laptop.html"  class="items">Laptops </a>
+  <a href="./speakers.html"  class="items">Speakers </a>
+  <a href="./smart tv .html"  class="items">Smart TV </a>   
+  <a href="./tablet.html"  class="items">Tablets </a>
+  <a href="./camera.html"  class="items">cameras </a>
+  <a href="./mouse.html"  class="items">Mouse </a>
+  <a href="./joystic.html"  class="items">Joystics </a>
+  <a href="./usb.html"  class="items">USB</a>
+</div> 
+
+     
+    <div>
+      <img src="./images/banner.webp" alt="" width="100%" height="300px" id="top1">
+    </div>
+
+  <div style="text-align: center;"><h1 class="product-heading">Headphones</h1></div>
+
+       <div style="display: flex;">
+        <div class="product">
+        <img src="./images/jbl tune.jpg" alt="" height="250px" width="220px" style="padding-left: 70px;">
+        <div class="content">
+          <h3>JBL Tune 720BT</h3>
+         <p>Wireless Over-Ear Headphones with JBL Pure Bass Sound, Bluetooth 5.3, Up to 76H Battery Life and Speed Charge, Lightweight, Comfortable and Foldable Design (Black)<p>   
+          <div style="display: flex;">
+            <p class="off-price">$3,999</p>
+            <p class="org-price">4,599</p>
+            <p class="offer">25% off</p>
+          </div>
+        <h4><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star-half-stroke" style="color:rgb(8, 88, 8)"></i></h4>
+        <button class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+        <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+        </div>
+       </div>
+
+       <div class="product">
+        <img src="./images/sony headset.jpg" alt="" height="250px" width="220px" style="padding-left: 70px;">
+        <div class="content">
+          <h3>Sony WH-CH520</h3>
+         <p> Wireless Bluetooth On-Ear Headphones with Microphone for Calls and Voice Control, Up to 50 Hours Battery Life with Quick Charge Function, Includes USB-C Charging.</p>   
+         <div style="display: flex;">
+          <p class="off-price">$2,799</p>
+          <p class="org-price">$4,999</p>
+          <p class="offer">38% off</p>
+          </div>
+        <h4><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star"style="color:rgb(8, 88, 8)" ></i><i class="fa-solid fa-star" style="color:rgb(8, 88, 8)"></i><i class="fa-regular fa-star" style="color:rgb(8, 88, 8)"></i></h4>
+        <button class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+        <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+        </div>
+       </div>
+
+       <div class="product">
+        <img src="./images/jlab neon.jpg" alt="" height="250px" width="220px" style="padding-left: 70px;">
+        <div class="content">
+          <h3>JLAB Neon</h3>
+         <p>Wireless On-Ear Headphones, Graphite/Green, 13 Hour Bluetooth Playtime, Noise Isolation, 40mm Neodymium Drivers, C3 Sound (Crystal Clear Clarity)</p>   
+         <div style="display: flex;">
+          <p class="off-price">$1,499</p>
+          <p class="org-price">$3,599</p>
+          <p class="offer">60% off</p>
+          </div>
+        <h4><i class="fa-solid fa-star"  style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star"  style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star"  style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star"  style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star-half-stroke"  style="color:rgb(8, 88, 8)"></i></h4>
+        <button class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+        <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+        </div>
+       </div>
+       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <div style="display: flex;">
+        <div class="product">
+        <img src="./images/tozo.jpg
+        " alt="" height="250px" width="220px" style="padding-left: 70px;">
+        <div class="content">
+        <h3>TOZO HT2</h3>
+        <p>Wireless Over Ear Bluetooth Headphones, 60H Playtime, Hi-Res Audio Custom EQ via App Deep Bass Comfort Fit Ear Cups, for Home Office Travel Red</p>  
+        <div style="display: flex;">
+          <p class="off-price">$999</p>
+          <p class="org-price">1,699</p>
+          <p class="offer">42% off</p>
+          </div>
+        <h4><i class="fa-solid fa-star"  style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star"  style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star"  style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star-half-stroke"  style="color:rgb(8, 88, 8)"></i><i class="fa-regular fa-star"  style="color:rgb(8, 88, 8)"></i></h4>
+        <button class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+        <button class="cart-button"> <i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+        </div>
+       </div>
+
+       <div class="product">
+        <img src="./images/tuinyo headphone.jpg" alt="" height="250px" width="220px" style="padding-left: 70px;">
+        <div class="content">
+        <h3>TUINYO</h3>
+        <p>Wireless, Over Ear Stereo Wireless Headset 40H Playtime with deep bass, Up to 76H Battery Life , Soft Memory-Protein Earmuffs, Built-in Mic Wired Mode</p>  
+        <div style="display: flex;">
+          <p class="off-price">1,999</p>
+          <p class="org-price">3,999</p>
+          <p class="offer">50% off</p>
+          </div>
+        <h4><i class="fa-solid fa-star"  style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star"  style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star"  style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star"  style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star-half-stroke"  style="color:rgb(8, 88, 8)"></i></h4>
+        <button class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+        <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+        </div>
+       </div>
+
+       <div class="product">
+        <img src="./images/MOVSSOU headphone.webp" alt="" height="250px" width="220px" style="padding-left: 70px;">
+        <div class="content">
+        <h3>MOVSSOU</h3>
+         <p>MOVSSOU E7 Active Noise Cancelling Headphones Bluetooth Headphones Wireless Headphones, Up to 76H Battery Life ,Over Ear with Microphone Deep Bass.</p>   
+         <div style="display: flex;">
+          <p class="off-price">$799</p>
+          <p class="org-price">$1,699</p>
+          <p class="offer">52% off</p>
+          </div>
+        <h4><i class="fa-solid fa-star"  style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star"  style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star"  style="color:rgb(8, 88, 8)"></i><i class="fa-solid fa-star-half-stroke"  style="color:rgb(8, 88, 8)"></i><i class="fa-regular fa-star"  style="color:rgb(8, 88, 8)"></i></h4>
+        <button class="buy-button"><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i>Buy Now</button>
+        <button class="cart-button"><i class="fa-solid fa-cart-shopping" style="margin-right: 5px;"></i>Add to Cart</button>
+        </div>
+       </div>
+       </div>
+
+
+       <div style="text-align: center;"> 
+          <a href="./smartwatch.html"><button class="more-items-button">More Items<i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i></button></a>
+       </div>
+
+       <div style="background-color:rgb(53, 52, 52); text-align: center; padding: 10px; color: white;">
+        <a href="#top1" style="font-size: 25px;">Back to Top</a>
+        </div> 
+      
+       <footer>
+      
+           <div class="footer_content">
+           <div class="footer">
+              <h1 class="foo-heading">Get to Know Us</h1>
+              <li class="foo-list"><a href="">Careers</a></li>
+              <li class="foo-list"><a href="">Blog</a></li>
+              <li class="foo-list"><a href="">About Shopcart</a></li>
+              <li class="foo-list"><a href="">Investor Relations</a></li>
+              <li class="foo-list"><a href="">Shopcart Devices</a></li>
+              <li class="foo-list"><a href="">ShopCart Science</a></li> 
+          </div>
+      
+      
+          <div class="footer">
+            <h1 class="foo-heading">Make Money with Us</h1>
+              <li class="foo-list"><a href="">Sell Products on shopCart</a></li>
+              <li class="foo-list"><a href="">Sell on ShopCart Businesss</a></li>
+              <li class="foo-list"><a href="">Sell apps on ShopCart</a></li>
+              <li class="foo-list"><a href="">Become an Affiliate</a></li>
+              <li class="foo-list"><a href="">Advertise Your Products</a></li>
+              <li class="foo-list"><a href="">Self publish with Us</a></li>
+              <li class="foo-list"><a href="">Host an ShopCart Hub</a></li>
+            
+          </div>
+      
+          <div class="footer">
+            <h1 class="foo-heading">ShopCart Payment Products</h1>
+            <ul>
+              <li class="foo-list"><a href="">ShopCart Business Card</a></li>
+              <li class="foo-list"><a href="">Shop with Points</a></li>
+              <li class="foo-list"><a href="">Reload Your Balance</a></li>
+              <li class="foo-list"><a href="">ShopCrat Currency Converter</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer">
+            <h1 class="foo-heading">Let Us Help You</h1>
+            <ul>
+              <li class="foo-list"><a href="">ShopCart and COVID-19</a></li>
+              <li class="foo-list"><a href="">Your Account</a></li>
+              <li class="foo-list"><a href="">Your Orders</a></li>
+              <li class="foo-list"><a href="">Shipping rates $ Policies</a></li>
+              <li class="foo-list"><a href="">Manage Your content and Devices</a></li>
+              <li class="foo-list"><a href="">Help</a></li>
+            </ul>
+          </div>
+          </div>
+      
+          <hr>
+         
+          <div class="footer-logo-content">
+     
+            <img src="./images/shopkart-removebg-preview.png" alt="" width="130px" height="80px">
+      
+            <div style="margin-left: 10%; display: flex;" >
+            <div style="border: 1px solid gainsboro; color: white; width: 140px; height: 30px; text-align:center; margin-top: 20px; margin-right: 10px;">
+              <p style="margin-top: 5px;"><i class="fa-solid fa-globe" style="margin-right: 7px;"></i>Languages</p>
+            </div>
+            
+            <div style="border: 1px solid gainsboro; color: white; width: 180px; height: 30px; text-align:center; margin-top: 20px; margin-right: 10px;">
+              <p style="margin-top: 5px; color: white;"><i class="fa-light fa-indian-rupee-sign;"></i> INR - Indian Rupee</p>
+            </div>
+      
+            <div style="border: 1px solid gainsboro; color: white; width: 160px; height: 30px; text-align:center; margin-top: 20px;">
+              <p style="margin-top: 5px; color: white;"><img src="./images/india flag.png" alt="" height="15px" width="23px" style="margin-right: 7px; margin-top: 3px;">United States</p>
+            </div>
+            </div>
+      
+          </div> 
+       </footer>
+</body>
+</html>
